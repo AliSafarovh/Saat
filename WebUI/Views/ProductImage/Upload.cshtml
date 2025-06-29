@@ -1,0 +1,122 @@
+﻿@model UploadProductImageDto
+
+@{
+    ViewData["Title"] = "Şəkil Yüklə";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Şəkil Yüklə</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<form asp-action="Upload" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Brend Seçin</label>
+        <select id="BrandId" class="form-control" required>
+            <option value="">-- Brend seçin --</option>
+            @foreach (var item in ViewBag.Brands as List<SelectListItem>)
+            {
+                <option value="@item.Value">@item.Text</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Məhsul Seçin</label>
+        <select asp-for="ProductId" class="form-control" required>
+            <option value="">-- Məhsul seçin --</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Şəkillər</label>
+        <div id="fileInputs">
+            <div class="input-group mb-2">
+                <input type="file" name="Files" class="form-control" accept="image/*" onchange="handleFileInputChange(this)" />
+                <button type="button" class="btn btn-danger" onclick="removeInput(this)" style="display:none;">Sil</button>
+            </div>
+        </div>
+        <small class="form-text text-muted">Ən çox 4 şəkil əlavə edə bilərsiniz.</small>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Yüklə</button>
+</form>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#BrandId').on('change', function () {
+                var brandName = $('#BrandId option:selected').val();
+
+                if (brandName) {
+                    $.ajax({
+                        url: '/ProductImage/GetProductsByBrand',
+                        type: 'GET',
+                        data: { brandName: brandName },
+                        success: function (data) {
+                            var productSelect = $('select[name="ProductId"]');
+                            productSelect.empty();
+                            productSelect.append('<option value="">-- Məhsul seçin --</option>');
+                            $.each(data, function (i, item) {
+                                productSelect.append('<option value="' + item.id + '">' + item.name + '</option>');
+                            });
+                        }
+                    });
+                }
+            });
+        });
+
+        function handleFileInputChange(input) {
+            const currentGroup = $(input).closest('.input-group');
+            currentGroup.find('button').show();
+
+            const file = input.files[0];
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    let previewImg = currentGroup.find('.preview-img');
+
+                    if (previewImg.length > 0) {
+                        previewImg.attr('src', e.target.result);
+                    } else {
+                        const img = `<img src="${e.target.result}" class="preview-img" style="height:60px; width:auto; margin-left:10px; border-radius:4px;" />`;
+                        currentGroup.append(img);
+                    }
+                };
+                reader.readAsDataURL(file);
+            }
+
+            const totalInputs = $('#fileInputs .input-group').length;
+            if (file && totalInputs < 4) {
+                const newInput = `
+                    <div class="input-group mb-2">
+                        <input type="file" name="Files" class="form-control" accept="image/*" onchange="handleFileInputChange(this)" />
+                        <button type="button" class="btn btn-danger" onclick="removeInput(this)">Sil</button>
+                    </div>`;
+                $('#fileInputs').append(newInput);
+            }
+        }
+
+        function removeInput(button) {
+            $(button).closest('.input-group').remove();
+
+            if ($('#fileInputs .input-group').length === 0) {
+                const newInput = `
+                    <div class="input-group mb-2">
+                        <input type="file" name="Files" class="form-control" accept="image/*" onchange="handleFileInputChange(this)" />
+                        <button type="button" class="btn btn-danger" onclick="removeInput(this)" style="display:none;">Sil</button>
+                    </div>`;
+                $('#fileInputs').append(newInput);
+            }
+        }
+    </script>
+}

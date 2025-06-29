@@ -1,0 +1,331 @@
+{
+  "Version": 1,
+  "Hash": "uUnZyQie/mzoTGbGHRu/rwhxdljhNbtZUX17XgZx578=",
+  "Source": "WebAPI",
+  "BasePath": "_content/WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebAPI\\wwwroot",
+      "Source": "WebAPI",
+      "ContentRoot": "C:\\Users\\samun\\Desktop\\Saat\\WebAPI\\wwwroot\\",
+      "BasePath": "_content/WebAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\samun\\Desktop\\Saat\\WebAPI\\wwwroot\\images\\products\\Elvin2-a.jpeg",
+      "SourceId": "WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\samun\\Desktop\\Saat\\WebAPI\\wwwroot\\",
+      "BasePath": "_content/WebAPI",
+      "RelativePath": "images/products/Elvin2-a#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "eeamupla4o",
+      "Integrity": "2m+WOSV+s4DrZ+K5qBqXmljZPZHdw/sraAKgbkS/tGc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\Elvin2-a.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\samun\\Desktop\\Saat\\WebAPI\\wwwroot\\images\\products\\Elvin-4.jpg",
+      "SourceId": "WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\samun\\Desktop\\Saat\\WebAPI\\wwwroot\\",
+      "BasePath": "_content/WebAPI",
+      "RelativePath": "images/products/Elvin-4#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gv8smmfuna",
+      "Integrity": "FIZhr4axq3neXcmpNTdtxpYO+WDjKDcLOsIxUlIx8ZI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\Elvin-4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\samun\\Desktop\\Saat\\WebAPI\\wwwroot\\images\\products\\photo_2025-04-06_20-45-42-e.jpg",
+      "SourceId": "WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\samun\\Desktop\\Saat\\WebAPI\\wwwroot\\",
+      "BasePath": "_content/WebAPI",
+      "RelativePath": "images/products/photo_2025-04-06_20-45-42-e#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "v6tgovad5w",
+      "Integrity": "OTQ+HMuk73L4j2T1yUlcsBcqK5VtiPp6Qp88RNrdBT4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\photo_2025-04-06_20-45-42-e.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "images/products/Elvin2-a.eeamupla4o.jpeg",
+      "AssetFile": "C:\\Users\\samun\\Desktop\\Saat\\WebAPI\\wwwroot\\images\\products\\Elvin2-a.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "241307"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2m+WOSV+s4DrZ+K5qBqXmljZPZHdw/sraAKgbkS/tGc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Jun 2025 12:38:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eeamupla4o"
+        },
+        {
+          "Name": "label",
+          "Value": "images/products/Elvin2-a.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2m+WOSV+s4DrZ+K5qBqXmljZPZHdw/sraAKgbkS/tGc="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/Elvin2-a.jpeg",
+      "AssetFile": "C:\\Users\\samun\\Desktop\\Saat\\WebAPI\\wwwroot\\images\\products\\Elvin2-a.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "241307"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2m+WOSV+s4DrZ+K5qBqXmljZPZHdw/sraAKgbkS/tGc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Jun 2025 12:38:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2m+WOSV+s4DrZ+K5qBqXmljZPZHdw/sraAKgbkS/tGc="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/Elvin-4.gv8smmfuna.jpg",
+      "AssetFile": "C:\\Users\\samun\\Desktop\\Saat\\WebAPI\\wwwroot\\images\\products\\Elvin-4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "95552"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FIZhr4axq3neXcmpNTdtxpYO+WDjKDcLOsIxUlIx8ZI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Jun 2025 12:38:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gv8smmfuna"
+        },
+        {
+          "Name": "label",
+          "Value": "images/products/Elvin-4.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FIZhr4axq3neXcmpNTdtxpYO+WDjKDcLOsIxUlIx8ZI="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/Elvin-4.jpg",
+      "AssetFile": "C:\\Users\\samun\\Desktop\\Saat\\WebAPI\\wwwroot\\images\\products\\Elvin-4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "95552"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FIZhr4axq3neXcmpNTdtxpYO+WDjKDcLOsIxUlIx8ZI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Jun 2025 12:38:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FIZhr4axq3neXcmpNTdtxpYO+WDjKDcLOsIxUlIx8ZI="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/photo_2025-04-06_20-45-42-e.jpg",
+      "AssetFile": "C:\\Users\\samun\\Desktop\\Saat\\WebAPI\\wwwroot\\images\\products\\photo_2025-04-06_20-45-42-e.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "40382"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OTQ+HMuk73L4j2T1yUlcsBcqK5VtiPp6Qp88RNrdBT4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 18:09:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OTQ+HMuk73L4j2T1yUlcsBcqK5VtiPp6Qp88RNrdBT4="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/photo_2025-04-06_20-45-42-e.v6tgovad5w.jpg",
+      "AssetFile": "C:\\Users\\samun\\Desktop\\Saat\\WebAPI\\wwwroot\\images\\products\\photo_2025-04-06_20-45-42-e.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "40382"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OTQ+HMuk73L4j2T1yUlcsBcqK5VtiPp6Qp88RNrdBT4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 18:09:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "v6tgovad5w"
+        },
+        {
+          "Name": "label",
+          "Value": "images/products/photo_2025-04-06_20-45-42-e.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OTQ+HMuk73L4j2T1yUlcsBcqK5VtiPp6Qp88RNrdBT4="
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\samun\\Desktop\\Saat\\WebAPI\\wwwroot\\images\\products\\Elvin-4.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\Elvin-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\samun\\Desktop\\Saat\\WebAPI\\wwwroot\\images\\products\\Elvin2-a.jpeg",
+      "PackagePath": "staticwebassets\\images\\products\\Elvin2-a.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\samun\\Desktop\\Saat\\WebAPI\\wwwroot\\images\\products\\photo_2025-04-06_20-45-42-e.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\photo_2025-04-06_20-45-42-e.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WebAPI.props",
+      "PackagePath": "build\\WebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebAPI.props",
+      "PackagePath": "buildMultiTargeting\\WebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebAPI.props",
+      "PackagePath": "buildTransitive\\WebAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

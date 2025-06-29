@@ -1,0 +1,106 @@
+﻿@model List<ResultProductDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+    var apiBaseUrl = "https://localhost:7228/"; // Burada API portunu özünə uyğun dəyiş, sekili buradan oxuya bilsin.
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Məhsul Siyahısı</div>
+            </div>
+            <div class="card-body">
+                <div class="card-sub mb-3">
+                    Məhsullarla bağlı əməliyyatları aşağıdan edə bilərsiniz.
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover text-nowrap">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>#</th>
+                                <th>Məhsul Adı</th>
+                                <th>Kateqoriya</th>
+                                <th>Brend</th>
+                                <th>Gender</th>
+                                <th>Rəng</th>
+                                <th>Forması</th>
+                                <th style="min-width: 200px;">Açıqlama</th>
+                                <th>Qiymət</th>
+                                <th>Stok</th>
+                                <th>Endirimli Qiymət</th>
+                                <th>Ən Çox Satılan</th>
+                                <th>Məhsul şəkli</th>
+                                <th>Yenilə</th>
+                                <th>Sil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                count++;
+                                <tr>
+                                    <td>@count</td>
+                                    <td>@item.Name</td>
+                                    <td>@item.CategoryName</td>
+                                    <td>@item.BrandName</td>
+                                    <td>@item.GenderName</td>
+                                    <td>
+                                        <span title="@string.Join(", ", item.ColorNames)">
+                                            @string.Join(", ", item.ColorNames.Take(2))@(item.ColorNames.Count > 2 ? ", ..." : "")
+                                        </span>
+                                    </td>
+
+                                    <td>@item.ShapeName</td>
+                                    <td style="max-width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="@item.Description">
+                                        @item.Description
+                                    </td>
+                                    <td>@item.Price.ToString("0.00")</td>
+                                    <td>@item.Stock</td>
+                                    <td>@(item.DiscountPrice.HasValue ? item.DiscountPrice.Value.ToString("0.00") : "")</td>
+                                    <td>
+                                        @if (item.BestSeller)
+                                        {
+                                            <span class="text-success" title="Ən çox satılan">✓</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted" title="Ən çox satılmayan">−</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (item.Images != null && item.Images.Count > 0)
+                                        {
+                                            foreach (var imagePath in item.Images)
+                                            {
+                                                var fullImageUrl = apiBaseUrl + imagePath.Replace("\\", "/");
+                                                <img src="@fullImageUrl" alt="Məhsul şəkli" style="max-height:50px; max-width:50px; object-fit:contain; margin-right:5px;" />
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <span>Şəkil yoxdur</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <a href="/Product/UpdateProduct/@item.Id" class="btn btn-sm btn-outline-success">Yenilə</a>
+                                    </td>
+                                    <td>
+                                        <a href="/Product/DeleteProduct/@item.Id" class="btn btn-sm btn-outline-danger" onclick="return confirm('Əminsiniz?')">Sil</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <a href="/Product/CreateProduct/" class="btn btn-outline-primary mt-3">Yeni Məhsul Əlavə Et</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+

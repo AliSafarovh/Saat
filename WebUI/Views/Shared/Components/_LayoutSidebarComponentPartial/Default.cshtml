@@ -1,0 +1,104 @@
+﻿<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+    .sidebar .nav-item i {
+        color: #554 !important;
+    }
+
+    .sidebar .nav-item p {
+        color: #554 !important;
+    }
+</style>
+
+<div class="sidebar">
+    <div class="scrollbar-inner sidebar-wrapper">
+        <div class="user">
+            <div class="photo">
+                <img src="~/Ready-Bootstrap-Dashboard-master/assets/img/profile.jpg" />
+            </div>
+            <div class="info">
+                <a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+                    <span>
+                        Admin Panel
+                        <span class="user-level">Ali Safaroff</span>
+                        <span class="caret"></span>
+                    </span>
+                </a>
+                <div class="clearfix"></div>
+
+                <div class="collapse in" id="collapseExample" aria-expanded="true">
+                    <ul class="nav">
+                        <li>
+                            <a href="#profile">
+                                <span class="link-collapse">Məhsullar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#edit">
+                                <span class="link-collapse">Şifrəni Yenilə</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#settings">
+                                <span class="link-collapse">Parametrlər</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <ul class="nav">
+            <li class="nav-item">
+                <a asp-controller="Category" asp-action="Index">
+                    <i class="bi bi-tags"></i> Kateqoriyalar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Product" asp-action="Index">
+                    <i class="bi bi-box-seam"></i><p>Məhsullar</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Brands" asp-action="Index">
+                    <i class="bi bi-bookmark-star"></i><p>Brendlər</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Gender" asp-action="Index">
+                    <i class="bi bi-person-exclamation"></i><p>Gender</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="ProductImage" asp-action="Upload">
+                    <i class="bi bi-images"></i><p>Şəkillər</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="BestSeller" asp-action="Index">
+                    <i class="bi bi-star-fill"></i><p>Ən çox satılanlar</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Shape" asp-action="Index">
+                    <i class="bi bi-circle-square"></i><p>Forma</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Color" asp-action="Index">
+                    <i class="bi bi-palette-fill"></i><p>Rənglər</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Settings" asp-action="Index">
+                    <i class="bi bi-gear-fill"></i><p>Parametrlər</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Login" asp-action="LogOut">
+                    <i class="bi bi-box-arrow-right"></i><p>Çıxış Et</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
