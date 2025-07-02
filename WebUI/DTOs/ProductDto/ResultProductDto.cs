@@ -17,7 +17,7 @@ namespace WebUI.DTOs.ProductDto
         public string GenderName { get; set; }
         public string CategoryName { get; set; }
         public string BrandName { get; set; }
-        public string ShapeName { get; set; }
+        public string? ShapeName { get; set; }
         public List<string> ColorNames { get; set; }
         public List<string> Images { get; set; }
     }

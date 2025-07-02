@@ -18,7 +18,7 @@ namespace Application.DTOs.Product
         public int Stock { get; set; }
         public decimal? DiscountPrice { get; set; }
         public bool BestSeller { get; set; }
-        public string ShapeName { get; set; }
+        public string ? ShapeName { get; set; }
         public List<string> ColorNames { get; set; }
     }
 }

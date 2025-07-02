@@ -18,10 +18,10 @@ public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommandR
     public async Task<UpdateProductCommandResponse> Handle(UpdateProductCommandRequest request, CancellationToken cancellationToken)
     {
         Product product = await _productReadRepository
-            .GetWhere(p => p.Id == request.Id)
-            .Include(p => p.ProductColors)
-            .Include(p => p.ProductImages)
-            .FirstOrDefaultAsync();
+     .GetWhere(p => p.Id == request.Id)
+     .Include(p => p.ProductColors)
+     .Include(p => p.ProductImages)
+     .FirstOrDefaultAsync();
 
         if (product == null)
             throw new Exception("Product tapılmadı.");

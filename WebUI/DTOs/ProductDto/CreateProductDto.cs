@@ -6,7 +6,7 @@
         public int CategoryId { get; set; }
         public int BrandId { get; set; }
         public List<int> ColorIds { get; set; }
-        public int ShapeId { get; set; }
+        public int? ShapeId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }

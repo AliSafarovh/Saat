@@ -12,8 +12,8 @@ using Persistence.Contexts;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(SaatDbContext))]
-    [Migration("20250627124837_mig_3")]
-    partial class mig_3
+    [Migration("20250702081141_mig1")]
+    partial class mig1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -146,6 +146,9 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<decimal?>("DiscountPrice")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<int>("GenderId")
                         .HasColumnType("int");
 
@@ -153,13 +156,10 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal?>("OldPrice")
-                        .HasColumnType("decimal(18,2)");
-
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("ShapeId")
+                    b.Property<int?>("ShapeId")
                         .HasColumnType("int");
 
                     b.Property<int>("Stock")
@@ -280,9 +280,7 @@ namespace Persistence.Migrations
 
                     b.HasOne("Domain.Entities.Shape", "Shape")
                         .WithMany("Products")
-                        .HasForeignKey("ShapeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ShapeId");
 
                     b.Navigation("Brand");
 

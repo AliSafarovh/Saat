@@ -156,7 +156,7 @@ namespace Persistence.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("ShapeId")
+                    b.Property<int?>("ShapeId")
                         .HasColumnType("int");
 
                     b.Property<int>("Stock")
@@ -277,9 +277,7 @@ namespace Persistence.Migrations
 
                     b.HasOne("Domain.Entities.Shape", "Shape")
                         .WithMany("Products")
-                        .HasForeignKey("ShapeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ShapeId");
 
                     b.Navigation("Brand");
 

@@ -1,124 +1,148 @@
-﻿    @model CreateProductDto
-    @{
-        ViewData["Title"] = "Yeni Məhsul Əlavə Et";
-        Layout = "~/Views/AdminLayout/Index.cshtml";
-    }
-    <div class="content">
-        <div class="container-fluid">
-            <h4 class="page-title">Məhsul əməliyyatları</h4>
-            <div class="row">
-                <div class="col-md-12">
-                    <form method="post">
-                        @Html.AntiForgeryToken()
+﻿@model CreateProductDto
+@{
+    ViewData["Title"] = "Yeni Məhsul Əlavə Et";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Məhsul əməliyyatları</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                    @Html.AntiForgeryToken()
 
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-title">Yeni Məhsul Girişi</div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Yeni Məhsul Girişi</div>
+                        </div>
+                        <div class="card-body">
+
+                            <div class="form-group">
+                                <label for="productname">Məhsul Adı</label>
+                                <input type="text" class="form-control" asp-for="Name" id="productname" required>
                             </div>
-                            <div class="card-body">
 
-                                <div class="form-group">
-                                    <label for="productname">Məhsul Adı</label>
-                                    <input type="text" class="form-control" asp-for="Name" id="productname" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="price">Məhsul Qiyməti</label>
-                                    <input type="number" step="0.01" class="form-control" asp-for="Price" id="price" required>
-                                </div>
+                            <div class="form-group">
+                                <label for="price">Məhsul Qiyməti</label>
+                                <input type="number" step="0.01" class="form-control" asp-for="Price" id="price" required>
+                            </div>
 
-                                <div class="form-group">
-                                    <label for="OldPrice">Endirim Qiyməti</label>
+                            <div class="form-group">
+                                <label for="OldPrice">Endirim Qiyməti</label>
                                 <input type="number" step="0.01" class="form-control" asp-for="DiscountPrice" id="OldPrice" required>
-                                </div>
+                            </div>
 
-                                <div class="form-group">
-                                    <label for="stock">Stok Sayı</label>
-                                    <input type="number" class="form-control" asp-for="Stock" id="stock" required>
-                                </div>
+                            <div class="form-group">
+                                <label for="stock">Stok Sayı</label>
+                                <input type="number" class="form-control" asp-for="Stock" id="stock" required>
+                            </div>
 
-                                <div class="form-group">
-                                    <label for="category">Kateqoriya Seçin</label>
-                                    @Html.DropDownListFor(x => x.CategoryId,
-                                             (List<SelectListItem>)ViewBag.CategoryValues,
-                                             new { @class = "form-control" })
-                                </div>
+                            <div class="form-group">
+                                <label for="category">Kateqoriya Seçin</label>
+                                @Html.DropDownListFor(x => x.CategoryId,
+                                         (List<SelectListItem>)ViewBag.CategoryValues,
+                                         new { @class = "form-control", id = "CategoryId" })
+                            </div>
 
-                                <div class="form-group">
-                                    <label for="brand">Brend Seçin</label>
-                                    @Html.DropDownListFor(x => x.BrandId,
-                                             (List<SelectListItem>)ViewBag.BrandValues,
-                                             new { @class = "form-control" })
-                                </div>
+                            <div class="form-group">
+                                <label for="brand">Brend Seçin</label>
+                                @Html.DropDownListFor(x => x.BrandId,
+                                         (List<SelectListItem>)ViewBag.BrandValues,
+                                         new { @class = "form-control", id = "BrandId" })
+                            </div>
 
-                                <div class="form-group">
-                                    <label for="gender">Cins Seçin</label>
-                                    @Html.DropDownListFor(x => x.GenderId,
-                                             (List<SelectListItem>)ViewBag.GenderValues,
-                                             new { @class = "form-control" })
-                                </div>
+                            <div class="form-group">
+                                <label for="gender">Cins Seçin</label>
+                                @Html.DropDownListFor(x => x.GenderId,
+                                         (List<SelectListItem>)ViewBag.GenderValues,
+                                         new { @class = "form-control", id = "GenderId" })
+                            </div>
 
                             <div class="form-group">
                                 <label for="ColorIds">Rəng Seçin</label>
                                 @Html.ListBoxFor(x => x.ColorIds,
                                          (List<SelectListItem>)ViewBag.ColorValues,
-                                         new { @class = "form-control", multiple = "multiple" })
+                                         new { @class = "form-control", multiple = "multiple", id = "ColorIds" })
                             </div>
 
-
-                            <div class="form-group">
+                            <div class="form-group" id="shapeGroup">
                                 <label for="shape">Forma Seçin</label>
                                 @Html.DropDownListFor(x => x.ShapeId,
-                                         (List<SelectListItem>)ViewBag.ShapeValues,
-                                         new { @class = "form-control" })
+                                         new SelectList(ViewBag.ShapeValues, "Value", "Text"),
+                                         "-- Seçin --",
+                                         new { @class = "form-control", id = "ShapeId" })
                             </div>
 
-                                <div class="form-group">
-                                    <label for="description">Açıqlama</label>
-                                    <textarea class="form-control" asp-for="Description" id="description" rows="4" required></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Ən cox satilanlar</label>
-                                    <div class="custom-control custom-switch">
-                                        <input type="checkbox" class="custom-control-input" asp-for="BestSeller" id="status">
-                                        <label class="custom-control-label" for="status">Aktiv</label>
-                                    </div>
-                                </div>
+                            <div class="form-group">
+                                <label for="description">Açıqlama</label>
+                                <textarea class="form-control" asp-for="Description" id="description" rows="4" required></textarea>
                             </div>
-                            <div class="card-action">
-                                <button class="btn btn-success">Təsdiq Et</button>
-                                <a href="@Url.Action("Index", "Product")" class="btn btn-secondary">İmtina Et</a>
+
+                            <div class="form-group">
+                                <label class="form-label">Ən çox satılanlar</label>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" asp-for="BestSeller" id="status">
+                                    <label class="custom-control-label" for="status">Aktiv</label>
+                                </div>
                             </div>
                         </div>
-                    </form>
-                </div>
+                        <div class="card-action">
+                            <button class="btn btn-success">Təsdiq Et</button>
+                            <a href="@Url.Action("Index", "Product")" class="btn btn-secondary">İmtina Et</a>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
 
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    @* kateqoriyalara uygun brendleri getirmek ucun scriptler *@
-    @section Scripts {
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
 
-        <script>
-            $(document).ready(function () {
-                $('#CategoryId').on('change', function () {
-                    var categoryText = $('#CategoryId option:selected').text();
+            // İlk açıldıqda seçilmiş kateqoriyaya görə brendləri yüklə
+            var initialCategoryText = $('#CategoryId option:selected').text();
+            loadBrandsByCategory(initialCategoryText);
 
-                    $.ajax({
-                        url: '/Product/GetBrandsByCategoryName',
-                        type: 'GET',
-                        data: { categoryName: categoryText },
-                        success: function (brands) {
-                            var $brandDropdown = $('#BrandId');
-                            $brandDropdown.empty();
+            // İlk açılışda Shape sahəsini idarə et
+            toggleShapeByCategory();
 
-                            $.each(brands, function (i, brand) {
-                                $brandDropdown.append($('<option></option>').val(brand.value).text(brand.text));
-                            });
-                        }
-                    });
-                });
+            // Kategoriya dəyişdikdə brendləri yenilə və Shape sahəsini idarə et
+            $('#CategoryId').on('change', function () {
+                var categoryText = $('#CategoryId option:selected').text();
+                loadBrandsByCategory(categoryText);
+                toggleShapeByCategory();
             });
-        </script>
-    }
+
+            function loadBrandsByCategory(categoryName) {
+                $.ajax({
+                    url: '/Product/GetBrandsByCategoryName',
+                    type: 'GET',
+                    data: { categoryName: categoryName },
+                    success: function (brands) {
+                        var $brandDropdown = $('#BrandId');
+                        $brandDropdown.empty();
+
+                        $.each(brands, function (i, brand) {
+                            $brandDropdown.append($('<option></option>').val(brand.value).text(brand.text));
+                        });
+                    }
+                });
+            }
+
+            function toggleShapeByCategory() {
+                var categoryText = $('#CategoryId option:selected').text().toLowerCase();
+
+                if (categoryText.includes("aksesuar")) {
+                    $('#shapeGroup').hide();
+                    $('#ShapeId').val(''); // forma göndərilməməsi üçün null et
+                } else {
+                    $('#shapeGroup').show();
+                }
+            }
+        });
+    </script>
+}

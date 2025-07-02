@@ -5,6 +5,7 @@ using Persistence.Contexts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -45,12 +46,17 @@ namespace Persistence.Repositories
             return await query.FirstOrDefaultAsync();
         }
 
-        public IQueryable<T> GetWhere(Func<T, bool> filter, bool tracking = true)
+        public IQueryable<T> GetWhere(Expression<Func<T, bool>> filter, bool tracking = true)
         {
             IQueryable<T> query = Table;
             if (!tracking)
                 query = query.AsNoTracking();
+
+            if (filter != null)
+                query = query.Where(filter);
+
             return query;
         }
+
     }
 }
