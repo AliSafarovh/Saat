@@ -648,6 +648,14 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "CategoryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
           }
         ],
         "responses": {

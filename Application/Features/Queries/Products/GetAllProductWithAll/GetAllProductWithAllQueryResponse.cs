@@ -9,6 +9,9 @@ namespace Application.Features.Queries.Products.GetAllProductWithAll
 {
     public class GetAllProductWithAllQueryResponse
     {
-        public List<GetAllProductWithAllDto> Products { get; set; }
+            public List<GetAllProductWithAllDto> Products { get; set; }
+            public int TotalCount { get; set; }
+            public int TotalPages { get; set; }
+     
     }
 }

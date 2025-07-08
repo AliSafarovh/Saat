@@ -8,6 +8,7 @@ using WebUI.DTOs.ColorDto;
 using WebUI.DTOs.GenderDto;
 using WebUI.DTOs.ProductDto;
 using WebUI.DTOs.ShapeDto;
+using WebUI.Models;
 
 namespace WebUI.Controllers
 {
@@ -20,18 +21,68 @@ namespace WebUI.Controllers
             _httpClientFactory = httpClientFactory;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1, int? categoryId = null)
         {
+            var pageSize = 10;
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7228/api/Product/GetAllProductsWith");
+
+            // API url - filter varsa əlavə et
+            var requestUrl = $"https://localhost:7228/api/Product/GetAllProductsWith?page={page - 1}&size={pageSize}";
+            if (categoryId.HasValue)
+            {
+                requestUrl += $"&categoryId={categoryId.Value}";  // Kiçik "categoryId"
+            }
+
+            var responseMessage = await client.GetAsync(requestUrl);
+
+            // Kategoriyaları da çəkirik
+            var categoryResponse = await client.GetAsync("https://localhost:7228/api/Category");
+            var categoryJson = await categoryResponse.Content.ReadAsStringAsync();
+            var categoryData = JsonConvert.DeserializeObject<CategoryResponseDto>(categoryJson);
+
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var result = JsonConvert.DeserializeObject<ProductResponseDto>(jsonData);
-                return View(result.Products);
+
+                // Toplam səhifə sayını hesabla
+                var totalPages = (int)Math.Ceiling((double)result.TotalCount / pageSize);
+
+                var model = new ProductListViewModel
+                {
+                    Products = result.Products,
+                    TotalCount = result.TotalCount,
+                    CurrentPage = page,
+                    PageSize = pageSize,
+                    TotalPages = totalPages,
+                    SelectedCategoryId = categoryId,
+                    Categories = categoryData.Categories.Select(c => new CategoryItemDto
+                    {
+                        Id = c.Id,
+                        Name = c.Name
+                    }).ToList()
+                };
+
+                return View(model);
             }
-            return View(new List<ResultProductDto>());
+
+            // Uğursuz olduqda boş model döndür
+            return View(new ProductListViewModel
+            {
+                Products = new List<ResultProductDto>(),
+                CurrentPage = page,
+                PageSize = pageSize,
+                TotalCount = 0,
+                TotalPages = 0,
+                SelectedCategoryId = categoryId,
+                Categories = categoryData.Categories.Select(c => new CategoryItemDto
+                {
+                    Id = c.Id,
+                    Name = c.Name
+                }).ToList()
+            });
         }
+
 
         [HttpGet]
         public async Task<IActionResult> CreateProduct()
