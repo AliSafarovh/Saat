@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bLcnyVd1ujsWa5pQts65zbRZeomYZQvyJOKK8ysVzKU=",
+  "Hash": "2yTPp7DkhxN76SVkcZ4yMp/BV9b0yvb4n7O6fBxNNM0=",
   "Source": "WebUI",
   "BasePath": "_content/WebUI",
   "Mode": "Default",
@@ -99,6 +99,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\samun\\Desktop\\Saat\\WebUI\\wwwroot\\images\\logo.jpg",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\samun\\Desktop\\Saat\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "images/logo#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vlf85jhqqu",
+      "Integrity": "/R2rNx2cHHGr5XNuDmGZipBoUSNLvWJGc/6jydcHbXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.jpg"
     },
     {
       "Identity": "C:\\Users\\samun\\Desktop\\Saat\\WebUI\\wwwroot\\js\\site.js",
@@ -3098,6 +3119,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "images/logo.jpg",
+      "AssetFile": "C:\\Users\\samun\\Desktop\\Saat\\WebUI\\wwwroot\\images\\logo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9741"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/R2rNx2cHHGr5XNuDmGZipBoUSNLvWJGc/6jydcHbXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 07:47:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/R2rNx2cHHGr5XNuDmGZipBoUSNLvWJGc/6jydcHbXA="
+        }
+      ]
+    },
+    {
+      "Route": "images/logo.vlf85jhqqu.jpg",
+      "AssetFile": "C:\\Users\\samun\\Desktop\\Saat\\WebUI\\wwwroot\\images\\logo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9741"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/R2rNx2cHHGr5XNuDmGZipBoUSNLvWJGc/6jydcHbXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 07:47:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vlf85jhqqu"
+        },
+        {
+          "Name": "label",
+          "Value": "images/logo.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/R2rNx2cHHGr5XNuDmGZipBoUSNLvWJGc/6jydcHbXA="
         }
       ]
     },

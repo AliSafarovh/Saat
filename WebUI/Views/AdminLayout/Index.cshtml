@@ -10,9 +10,13 @@
         @await Component.InvokeAsync("_LayoutSidebarComponentPartial")
 
         <div class="main-panel">
-            @RenderBody()
+            <div class="content-wrapper p-4 mt-5">
+                <!-- ⬅️ Buraya mt-5 və ya style əlavə et -->
+                @RenderBody()
+            </div>
             @await Component.InvokeAsync("_LayoutFooterComponentPartial")
         </div>
+
     </div>
 
     @await Component.InvokeAsync("_LayoutScriptComponentPartial")

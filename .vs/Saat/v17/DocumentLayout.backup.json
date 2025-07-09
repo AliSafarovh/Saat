@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\samun\\Desktop\\Saat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A4FB6FD-5DCC-4DEC-B7B5-7B32793B7ACB}|WebUI\\WebUI.csproj|c:\\users\\samun\\desktop\\saat\\webui\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4FB6FD-5DCC-4DEC-B7B5-7B32793B7ACB}|WebUI\\WebUI.csproj|solutionrelative:webui\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6A4FB6FD-5DCC-4DEC-B7B5-7B32793B7ACB}|WebUI\\WebUI.csproj|c:\\users\\samun\\desktop\\saat\\webui\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6A4FB6FD-5DCC-4DEC-B7B5-7B32793B7ACB}|WebUI\\WebUI.csproj|solutionrelative:webui\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A4FB6FD-5DCC-4DEC-B7B5-7B32793B7ACB}|WebUI\\WebUI.csproj|c:\\users\\samun\\desktop\\saat\\webui\\models\\productlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4FB6FD-5DCC-4DEC-B7B5-7B32793B7ACB}|WebUI\\WebUI.csproj|solutionrelative:webui\\models\\productlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A4FB6FD-5DCC-4DEC-B7B5-7B32793B7ACB}|WebUI\\WebUI.csproj|c:\\users\\samun\\desktop\\saat\\webui\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4FB6FD-5DCC-4DEC-B7B5-7B32793B7ACB}|WebUI\\WebUI.csproj|solutionrelative:webui\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4FB6FD-5DCC-4DEC-B7B5-7B32793B7ACB}|WebUI\\WebUI.csproj|c:\\users\\samun\\desktop\\saat\\webui\\views\\adminlayout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6A4FB6FD-5DCC-4DEC-B7B5-7B32793B7ACB}|WebUI\\WebUI.csproj|solutionrelative:webui\\views\\adminlayout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1007,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ProductListViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\samun\\Desktop\\Saat\\WebUI\\Models\\ProductListViewModel.cs",
-              "RelativeDocumentMoniker": "WebUI\\Models\\ProductListViewModel.cs",
-              "ToolTip": "C:\\Users\\samun\\Desktop\\Saat\\WebUI\\Models\\ProductListViewModel.cs",
-              "RelativeToolTip": "WebUI\\Models\\ProductListViewModel.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T12:44:26.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\samun\\Desktop\\Saat\\WebUI\\Views\\Product\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebUI\\Views\\Product\\Index.cshtml",
-              "ToolTip": "C:\\Users\\samun\\Desktop\\Saat\\WebUI\\Views\\Product\\Index.cshtml",
-              "RelativeToolTip": "WebUI\\Views\\Product\\Index.cshtml",
-              "ViewState": "AgIAACYAAAAAAAAAAADwvzQAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\samun\\Desktop\\Saat\\WebUI\\Views\\AdminLayout\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebUI\\Views\\AdminLayout\\Index.cshtml",
+              "ToolTip": "C:\\Users\\samun\\Desktop\\Saat\\WebUI\\Views\\AdminLayout\\Index.cshtml",
+              "RelativeToolTip": "WebUI\\Views\\AdminLayout\\Index.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-08T12:43:38.822Z",
+              "WhenOpened": "2025-07-09T08:38:01.667Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\samun\\Desktop\\Saat\\WebUI\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebUI\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\samun\\Desktop\\Saat\\WebUI\\Views\\Product\\Index.cshtml*",
+              "RelativeToolTip": "WebUI\\Views\\Product\\Index.cshtml*",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAAAHYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-09T08:05:19.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\samun\\Desktop\\Saat\\WebUI\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "WebUI\\Controllers\\ProductController.cs",
               "ToolTip": "C:\\Users\\samun\\Desktop\\Saat\\WebUI\\Controllers\\ProductController.cs",
               "RelativeToolTip": "WebUI\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAmwBcAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAuwBgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T12:43:02.442Z",
+              "WhenOpened": "2025-07-09T08:03:18.028Z",
               "EditorCaption": ""
             }
           ]

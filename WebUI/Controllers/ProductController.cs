@@ -20,7 +20,6 @@ namespace WebUI.Controllers
         {
             _httpClientFactory = httpClientFactory;
         }
-
         public async Task<IActionResult> Index(int page = 1, int? categoryId = null)
         {
             var pageSize = 10;
@@ -82,7 +81,6 @@ namespace WebUI.Controllers
                 }).ToList()
             });
         }
-
 
         [HttpGet]
         public async Task<IActionResult> CreateProduct()
