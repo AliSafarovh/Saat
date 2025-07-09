@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using System.Text.Json;
 using WebUI.DTOs.BrandDto;
+using WebUI.DTOs.CategoryDto;
 using WebUI.DTOs.ProductDto;
 using WebUI.DTOs.ProductImageDto;
 
@@ -20,52 +21,56 @@ namespace AdminPanel.Controllers
         [HttpGet]
         public async Task<IActionResult> Upload()
         {
-            var client = _httpClientFactory.CreateClient();
-            var response = await client.GetAsync("https://localhost:7228/api/Brand");
-
-            if (!response.IsSuccessStatusCode)
-            {
-                return View();
-            }
-
-            var jsonData = await response.Content.ReadAsStringAsync();
-            var result = JsonConvert.DeserializeObject<BrandResponseDto>(jsonData);
-            var brands = result.Brands;
-
-            ViewBag.Brands = brands.Select(x => new SelectListItem
-            {
-                Text = x.Name,
-                Value = x.Name // Burada Value olaraq BrandName göndəririk, çünki AJAX ondan istifadə edir
-            }).ToList();
-
             return View();
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetCategories()
+        {
+            var client = _httpClientFactory.CreateClient();
+            var response = await client.GetAsync("https://localhost:7228/api/Category");
+
+            if (!response.IsSuccessStatusCode)
+                return Json(new object[] { });
+
+            var json = await response.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<CategoryResponseDto>(json);
+
+            var categories = result.Categories.Select(c => new { id = c.Id, name = c.Name });
+            return Json(categories);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetBrandsByCategoryName(string categoryName)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var response = await client.GetAsync($"https://localhost:7228/api/Brand/GetBrandsByCategoryName?CategoryName={categoryName}");
+
+            if (!response.IsSuccessStatusCode)
+                return Json(new object[] { });
+
+            var json = await response.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<BrandResponseDto>(json);
+
+            var brands = result.Brands.Select(b => new { id = b.Id, name = b.Name });
+            return Json(brands);
+        }
 
         [HttpGet]
         public async Task<IActionResult> GetProductsByBrand(string brandName)
         {
             var client = _httpClientFactory.CreateClient();
             var response = await client.GetAsync($"https://localhost:7228/api/Product/GetProductsByBrandName?BrandName={brandName}");
-            if (!response.IsSuccessStatusCode) return Json(new List<object>());
+
+            if (!response.IsSuccessStatusCode)
+                return Json(new object[] { });
 
             var json = await response.Content.ReadAsStringAsync();
-            var result = System.Text.Json.JsonSerializer.Deserialize<ProductResponseDto>(json, new JsonSerializerOptions
-            {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-            });
+            var result = JsonConvert.DeserializeObject<ProductResponseDto>(json);
 
-            // sadəcə lazım olan məlumatları qaytarırıq (id və name)
-            var products = result.Products.Select(p => new
-            {
-                id = p.Id,
-                name = p.Name
-            });
-
+            var products = result.Products.Select(p => new { id = p.Id, name = p.Name });
             return Json(products);
         }
-
-
 
         [HttpPost]
         public async Task<IActionResult> Upload(UploadProductImageDto model)
@@ -99,7 +104,7 @@ namespace AdminPanel.Controllers
             return View(model);
         }
 
-      
+
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
