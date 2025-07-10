@@ -301,12 +301,6 @@ C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\scopedcss\bundle\WebAPI.styl
 C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\staticwebassets\msbuild.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\staticwebassets\msbuild.WebAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\staticwebassets\msbuild.build.WebAPI.props
-C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.WebAPI.props
-C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.WebAPI.props
-C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\WebAPI.csproj.Up2Date
 C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\WebAPI.dll
@@ -314,3 +308,8 @@ C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\refint\WebAPI.dll
 C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\WebAPI.pdb
 C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\WebAPI.genruntimeconfig.cache
 C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\ref\WebAPI.dll
+C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\samun\Desktop\Saat\WebAPI\obj\Debug\net8.0\staticwebassets.build.json.cache

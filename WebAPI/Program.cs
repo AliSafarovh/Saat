@@ -9,14 +9,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddApplicationServices();
 
-// CORS siyas?ti
+// CORS siyas?ti (Next.js v? AdminPanel üçün icaz?)
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAdminPanel", policy =>
+    options.AddPolicy("AllowAllClients", policy =>
     {
-        policy.WithOrigins("https://localhost:7016") // AdminPanel (MVC) portu
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        policy.WithOrigins(
+            "https://localhost:7016",   // AdminPanel (MVC)
+            "http://localhost:3000"     // Next.js frontend
+        )
+        .AllowAnyHeader()
+        .AllowAnyMethod();
     });
 });
 
@@ -37,8 +40,8 @@ app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 
-// CORS t?tbiqi burda olmalýdýr
-app.UseCors("AllowAdminPanel");
+// CORS t?tbiqi
+app.UseCors("AllowAllClients");
 
 app.UseAuthorization();
 
