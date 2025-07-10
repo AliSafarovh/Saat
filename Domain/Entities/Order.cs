@@ -1,22 +1,24 @@
-﻿using System;
+﻿using Domain.Entities.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public class Order
+    public class Order :BaseEntity
     {
-        public int Id { get; set; }
+        // Müştəri məlumatları
         public string FullName { get; set; }
         public string PhoneNumber { get; set; }
+        public string ? Mail { get; set; }
+        public string ? Location { get; set; }
         public string City { get; set; }
         public string AdditionalInfo { get; set; }
-        public string Store { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        // Sifarişdə olan məhsullar
+        public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 
-        public ICollection<OrderItem> OrderItems { get; set; }
+        // Ümumi qiymətlər (toplamaq üçün)
+        public decimal TotalPrice => OrderItems.Sum(oi => oi.TotalPrice);
+        public decimal TotalDiscountPrice => OrderItems.Sum(oi => oi.TotalDiscountPrice);
     }
-
 }

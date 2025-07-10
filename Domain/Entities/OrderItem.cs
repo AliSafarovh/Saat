@@ -1,24 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Entities.Common;
 
 namespace Domain.Entities
 {
-    public class OrderItem
+    public class OrderItem : BaseEntity
     {
-        public int Id { get; set; }
-
-        public string ProductName { get; set; }
+        public string Name { get; set; }
         public string Color { get; set; }
-        public int Quantity { get; set; }
-        public decimal Price { get; set; }
-        public decimal TotalPrice => Price * Quantity;
+        public int Count { get; set; }
+        public decimal Price { get; set; }         // Əsl qiymət (unit price)
+        public decimal DiscountPrice { get; set; } // Endirimli qiymət (unit price)
+        public decimal TotalPrice => Price * Count;                // Ümumi qiymət (əsli)
+        public decimal TotalDiscountPrice => DiscountPrice * Count; // Ümumi endirimli qiymət
 
-        // Foreign Key
+        // Xarici açar və əlaqə
         public int OrderId { get; set; }
         public Order Order { get; set; }
     }
-
 }

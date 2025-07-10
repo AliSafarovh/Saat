@@ -23,6 +23,8 @@ namespace Persistence.Contexts
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Color> Colors { get; set; }
         public DbSet<Shape> Shapes { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<ProductColor> ProductColors { get; set; }
 
 

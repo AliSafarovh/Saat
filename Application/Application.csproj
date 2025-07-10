@@ -16,4 +16,9 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTOs\OrderItem\" />
+    <Folder Include="DTOs\Order\" />
+  </ItemGroup>
+
 </Project>
