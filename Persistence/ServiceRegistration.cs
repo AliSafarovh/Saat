@@ -2,6 +2,8 @@
 using Application.Repositories.Categories;
 using Application.Repositories.Colors;
 using Application.Repositories.Genders;
+using Application.Repositories.OrderItems;
+using Application.Repositories.Orders;
 using Application.Repositories.ProductImages;
 using Application.Repositories.Products;
 using Application.Repositories.Shapes;
@@ -14,6 +16,8 @@ using Persistence.Repositories.Brands;
 using Persistence.Repositories.Categories;
 using Persistence.Repositories.Colors;
 using Persistence.Repositories.Genders;
+using Persistence.Repositories.OrderItems;
+using Persistence.Repositories.Orders;
 using Persistence.Repositories.ProductImages;
 using Persistence.Repositories.Products;
 using Persistence.Repositories.Shapes;
@@ -47,6 +51,10 @@ namespace Persistence
             services.AddScoped<IColorWriteRepository, ColorWriteRepository>();
             services.AddScoped<IShapeReadRepository, ShapeReadRepository>();
             services.AddScoped<IShapeWriteRepository, ShapeWriteRepository>();
+            services.AddScoped<IOrderWriteRepository, OrderWriteRepository>();
+            services.AddScoped<IOrderReadRepository, OrderReadRepository>();
+            services.AddScoped<IOrderItemWriteRepository, OrderItemWriteRepository>();
+            services.AddScoped<IOrderItemReadRepository, OrderItemReadRepository>();
 
 
 

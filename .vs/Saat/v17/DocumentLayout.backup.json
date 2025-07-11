@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\samun\\Desktop\\Saat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{96294E2D-6B74-4766-B727-D2E45902A9EE}|Application\\Application.csproj|c:\\users\\samun\\desktop\\saat\\application\\features\\queries\\orderitems\\getallorderitem\\getallorderitemqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96294E2D-6B74-4766-B727-D2E45902A9EE}|Application\\Application.csproj|solutionrelative:application\\features\\queries\\orderitems\\getallorderitem\\getallorderitemqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96294E2D-6B74-4766-B727-D2E45902A9EE}|Application\\Application.csproj|c:\\users\\samun\\desktop\\saat\\application\\features\\queries\\orderitems\\getallorderitem\\getallorderitemqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96294E2D-6B74-4766-B727-D2E45902A9EE}|Application\\Application.csproj|solutionrelative:application\\features\\queries\\orderitems\\getallorderitem\\getallorderitemqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96294E2D-6B74-4766-B727-D2E45902A9EE}|Application\\Application.csproj|c:\\users\\samun\\desktop\\saat\\application\\features\\queries\\orderitems\\getallorderitem\\getallorderitemqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96294E2D-6B74-4766-B727-D2E45902A9EE}|Application\\Application.csproj|solutionrelative:application\\features\\queries\\orderitems\\getallorderitem\\getallorderitemqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A4FB6FD-5DCC-4DEC-B7B5-7B32793B7ACB}|WebUI\\WebUI.csproj|c:\\users\\samun\\desktop\\saat\\webui\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6A4FB6FD-5DCC-4DEC-B7B5-7B32793B7ACB}|WebUI\\WebUI.csproj|solutionrelative:webui\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1007,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetAllOrderItemQueryResponse.cs",
-              "DocumentMoniker": "C:\\Users\\samun\\Desktop\\Saat\\Application\\Features\\Queries\\OrderItems\\GetAllOrderItem\\GetAllOrderItemQueryResponse.cs",
-              "RelativeDocumentMoniker": "Application\\Features\\Queries\\OrderItems\\GetAllOrderItem\\GetAllOrderItemQueryResponse.cs",
-              "ToolTip": "C:\\Users\\samun\\Desktop\\Saat\\Application\\Features\\Queries\\OrderItems\\GetAllOrderItem\\GetAllOrderItemQueryResponse.cs*",
-              "RelativeToolTip": "Application\\Features\\Queries\\OrderItems\\GetAllOrderItem\\GetAllOrderItemQueryResponse.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T12:54:35.593Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetAllOrderItemQueryRequest.cs",
-              "DocumentMoniker": "C:\\Users\\samun\\Desktop\\Saat\\Application\\Features\\Queries\\OrderItems\\GetAllOrderItem\\GetAllOrderItemQueryRequest.cs",
-              "RelativeDocumentMoniker": "Application\\Features\\Queries\\OrderItems\\GetAllOrderItem\\GetAllOrderItemQueryRequest.cs",
-              "ToolTip": "C:\\Users\\samun\\Desktop\\Saat\\Application\\Features\\Queries\\OrderItems\\GetAllOrderItem\\GetAllOrderItemQueryRequest.cs*",
-              "RelativeToolTip": "Application\\Features\\Queries\\OrderItems\\GetAllOrderItem\\GetAllOrderItemQueryRequest.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T12:54:07.468Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GetAllOrderItemQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\samun\\Desktop\\Saat\\Application\\Features\\Queries\\OrderItems\\GetAllOrderItem\\GetAllOrderItemQueryHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Features\\Queries\\OrderItems\\GetAllOrderItem\\GetAllOrderItemQueryHandler.cs",
-              "ToolTip": "C:\\Users\\samun\\Desktop\\Saat\\Application\\Features\\Queries\\OrderItems\\GetAllOrderItem\\GetAllOrderItemQueryHandler.cs*",
-              "RelativeToolTip": "Application\\Features\\Queries\\OrderItems\\GetAllOrderItem\\GetAllOrderItemQueryHandler.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T12:53:36.876Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\samun\\Desktop\\Saat\\WebUI\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebUI\\Views\\Order\\Index.cshtml",
+              "ToolTip": "C:\\Users\\samun\\Desktop\\Saat\\WebUI\\Views\\Order\\Index.cshtml*",
+              "RelativeToolTip": "WebUI\\Views\\Order\\Index.cshtml*",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-11T13:24:02.402Z",
               "EditorCaption": ""
             }
           ]

@@ -1,3 +1,10 @@
+using Application;
+using Application.Repositories.Orders;
+using Microsoft.EntityFrameworkCore;
+using Persistence;
+using Persistence.Contexts;
+using Persistence.Repositories.Orders;
+
 namespace Saat
 {
     public class Program
@@ -6,17 +13,26 @@ namespace Saat
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            // ?? Connection string (API il? eyni olmalýdýr)
+            builder.Services.AddDbContext<SaatDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            // ?? Application v? Persistence servisl?rini qeyd et (eynil? API-d?ki kimi)
+            builder.Services.AddPersistenceServices(builder.Configuration);
+            builder.Services.AddApplicationServices();
+
+            // ?? HTTP çaðýrýþlar üçün
             builder.Services.AddHttpClient();
+
+            // ??? View d?st?yi
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            // ??? Exception s?hif?si
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
@@ -27,6 +43,7 @@ namespace Saat
 
             app.UseAuthorization();
 
+            
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Category}/{action=Index}/{id?}");
