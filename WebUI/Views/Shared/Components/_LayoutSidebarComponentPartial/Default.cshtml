@@ -1,17 +1,64 @@
 ﻿<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
 <style>
-    .sidebar .nav-item i {
-        color: #554 !important;
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        overflow: hidden;
+        background-color: #f8f9fa;
+        border-right: 1px solid #ccc;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
     }
 
+    .sidebar-wrapper {
+        flex-grow: 1;
+        overflow-y: auto;
+        padding: 10px;
+        padding-top: 0;
+    }
+
+    .sidebar .user {
+        position: sticky;
+        top: 0;
+        background-color: #f8f9fa;
+        z-index: 1;
+        padding: 10px 10px 0 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+        .sidebar .user .photo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+    .sidebar .nav-item i,
     .sidebar .nav-item p {
         color: #554 !important;
+        margin-left: 5px;
     }
+
+    .sidebar .nav-item a {
+        display: flex;
+        align-items: center;
+        padding: 8px 10px;
+        color: #333;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background 0.2s;
+    }
+
+        .sidebar .nav-item a:hover {
+            background-color: #e2e6ea;
+        }
 </style>
 
+
 <div class="sidebar">
-    <div class="scrollbar-inner sidebar-wrapper">
+    <div class="sidebar-wrapper">
         <div class="user">
             <div class="photo">
                 <img src="~/Ready-Bootstrap-Dashboard-master/assets/img/profile.jpg" />
@@ -27,15 +74,15 @@
                 <div class="clearfix"></div>
 
                 <div class="collapse in" id="collapseExample" aria-expanded="true">
-                    <ul class="nav">
+                    <ul class="nav flex-column">
                         <li>
-                            <a href="#profile">
+                            <a asp-controller="Product" asp-action="Index">
                                 <span class="link-collapse">Məhsullar</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#edit">
-                                <span class="link-collapse">Şifrəni Yenilə</span>
+                            <a asp-controller="Order" asp-action="Index">
+                                <span class="link-collapse">Sifarişlər</span>
                             </a>
                         </li>
                         <li>
@@ -48,10 +95,10 @@
             </div>
         </div>
 
-        <ul class="nav">
+        <ul class="nav flex-column">
             <li class="nav-item">
                 <a asp-controller="Category" asp-action="Index">
-                    <i class="bi bi-tags"></i> Kateqoriyalar
+                    <i class="bi bi-tags"></i><p>Kateqoriyalar</p>
                 </a>
             </li>
             <li class="nav-item">
@@ -75,11 +122,6 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a asp-controller="BestSeller" asp-action="Index">
-                    <i class="bi bi-star-fill"></i><p>Ən çox satılanlar</p>
-                </a>
-            </li>
-            <li class="nav-item">
                 <a asp-controller="Shape" asp-action="Index">
                     <i class="bi bi-circle-square"></i><p>Forma</p>
                 </a>
@@ -91,11 +133,9 @@
             </li>
             <li class="nav-item">
                 <a asp-controller="Order" asp-action="Index">
-                    <i class="bi bi-cart-fill"></i>
-                    <p>Sifarişlər</p>
+                    <i class="bi bi-cart-fill"></i><p>Sifarişlər</p>
                 </a>
             </li>
-
             <li class="nav-item">
                 <a asp-controller="Login" asp-action="LogOut">
                     <i class="bi bi-box-arrow-right"></i><p>Çıxış Et</p>
